@@ -1,0 +1,59 @@
+{
+  "name": "mammatus/terraform",
+  "description": "🏗️ Tooling to pass data from Mammatus based apps to Terraform",
+  "license": "MIT",
+  "require": {
+    "php": "^8.4",
+    "mammatus/app": "dev-master",
+    "mammatus/terraform-events": "dev-main",
+    "psr/event-dispatcher": "^1.0.0"
+  },
+  "require-dev": {
+    "wyrihaximus/async-test-utilities": "^13.4.1",
+    "wyrihaximus/makefiles": "^0.12.3",
+    "wyrihaximus/test-utilities": "^13.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mammatus\\Terraform\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Mammatus\\Tests\\Terraform\\": "tests/"
+    }
+  },
+  "bin": [
+    "bin/mammatus-terraform-tfvars"
+  ],
+  "config": {
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "drupol/composer-packages": true,
+      "ergebnis/composer-normalize": true,
+      "icanhazstring/composer-unused": true,
+      "infection/extension-installer": true,
+      "mammatus/app": true,
+      "mammatus/groups": true,
+      "mindplay/composer-locator": true,
+      "phpstan/extension-installer": true,
+      "wyrihaximus/broadcast": true,
+      "wyrihaximus/generative-composer-plugin-tooling": true,
+      "wyrihaximus/makefiles": true,
+      "wyrihaximus/test-utilities": true
+    },
+    "platform": {
+      "php": "8.4.13"
+    },
+    "sort-packages": true
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "make on-install-or-update || true"
+    ],
+    "post-update-cmd": [
+      "make on-install-or-update || true"
+    ]
+  }
+}

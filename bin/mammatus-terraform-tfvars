@@ -1,0 +1,19 @@
+#!/usr/bin/php
+<?php declare(strict_types=1);
+
+use Mammatus\Container\Factory;
+use Mammatus\Terraform\Tfvars;
+
+(function(string $_composer_autoload_path) {
+    /**
+     * Require Composer's autoloader
+     */
+    require_once $_composer_autoload_path;
+})($_composer_autoload_path);
+
+(static function() {
+    /**
+     * Create and run the Terraform tfvars export
+     */
+    exit((static fn (): int => Factory::create()->get(Tfvars::class)->export()->value)());
+})();
