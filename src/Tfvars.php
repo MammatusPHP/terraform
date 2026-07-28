@@ -9,6 +9,8 @@ use Mammatus\Terraform\Encoder\Tfvars as TfvarsEncoder;
 use Mammatus\Terraform\Events\Variables;
 use Psr\EventDispatcher\EventDispatcherInterface;
 
+use const PHP_EOL;
+
 /** @api */
 final readonly class Tfvars
 {
@@ -21,7 +23,7 @@ final readonly class Tfvars
         $variables = Variables::create();
         $this->eventDispatcher->dispatch($variables);
 
-        echo new TfvarsEncoder()->encode($variables->get());
+        echo new TfvarsEncoder()->encode($variables->get()), PHP_EOL;
 
         return ExitCode::Success;
     }
