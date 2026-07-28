@@ -13,6 +13,8 @@ use WyriHaximus\AsyncTestUtilities\AsyncTestCase;
 use WyriHaximus\Broadcast\ArrayListenerProvider;
 use WyriHaximus\Broadcast\Dispatcher;
 
+use const PHP_EOL;
+
 final class TfvarsTest extends AsyncTestCase
 {
     /** @param array<class-string, array<callable>> $listeners */
@@ -33,12 +35,12 @@ final class TfvarsTest extends AsyncTestCase
     public static function exportProvider(): iterable
     {
         yield 'nothing' => [
-            '',
+            PHP_EOL,
             [],
         ];
 
         yield 'one' => [
-            'app_name = "mammatus-demo"',
+            'app_name = "mammatus-demo"' . PHP_EOL,
             [
                 Variables::class => [
                     static function (Variables $variables): void {
@@ -49,7 +51,7 @@ final class TfvarsTest extends AsyncTestCase
         ];
 
         yield 'two' => [
-            "rabbitmq_vhost = \"\$HOME_RABBITMQ_VHOST\"\nreplicas       = 3",
+            "rabbitmq_vhost = \"\$HOME_RABBITMQ_VHOST\"\nreplicas       = 3" . PHP_EOL,
             [
                 Variables::class => [
                     static function (Variables $variables): void {
