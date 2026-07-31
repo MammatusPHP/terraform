@@ -5,7 +5,7 @@
   "require": {
     "php": "^8.4",
     "mammatus/app": "dev-master",
-    "mammatus/terraform-events": "dev-main",
+    "mammatus/terraform-events": "^0.1.1",
     "psr/event-dispatcher": "^1.0.0"
   },
   "require-dev": {

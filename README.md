@@ -19,18 +19,28 @@ composer require mammatus/terraform
 
 Collect data from your Mammatus application and export it as **HCL tfvars lines** for GitHub Actions workflows or `terraform.tfvars` files.
 
-Register variables through a `Variables` event listener in your Mammatus app:
+Register variables through a [`wyrihaximus/broadcast`](https://github.com/wyrihaximus/php-broadcast) listener in your
+Mammatus app:
 
 ```php
+<?php
+
+declare(strict_types=1);
+
+namespace MyApp\Terraform;
+
 use Mammatus\Terraform\Events\Variables;
 use Mammatus\Terraform\Events\Variables\Registry\Entry;
+use WyriHaximus\Broadcast\Contracts\Listener;
 
-Variables::class => [
-    static function (Variables $variables): void {
+final class VariablesListener implements Listener
+{
+    public function vars(Variables $variables): void
+    {
         $variables->add(new Entry('app_name', 'mammatus-demo'));
         $variables->add(new Entry('replicas', 3));
-    },
-],
+    }
+}
 ```
 
 Export tfvars from the CLI:
