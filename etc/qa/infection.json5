@@ -57,6 +57,12 @@
             "ignore": [
                 "WyriHaximus\\TestUtilities\\TestCase::getSysTempDir"
             ]
+        },
+        "ReturnRemoval": {
+            "ignore": [
+                "Mammatus\\Terraform\\Encoder\\Tfvars::encode",
+                "Mammatus\\Terraform\\Encoder\\Tfvars::encodeArray"
+            ]
         }
     },
     "threads": 64

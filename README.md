@@ -102,7 +102,7 @@ jobs:
 Pass the generated lines into `terraformVars` between your static entries:
 
 ```yaml
-  release-managment:
+  release-management:
     needs:
       - terraform-mammatus-tfvars
     uses: WyriHaximus/github-workflows/.github/workflows/project-release-management.yaml@main
