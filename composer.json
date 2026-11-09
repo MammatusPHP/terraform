@@ -4,7 +4,7 @@
   "license": "MIT",
   "require": {
     "php": "^8.4",
-    "mammatus/app": "dev-master",
+    "mammatus/app": "^0.1.1",
     "mammatus/terraform-events": "^0.1.1",
     "psr/event-dispatcher": "^1.0.0"
   },
@@ -37,6 +37,7 @@
       "mammatus/app": true,
       "mammatus/groups": true,
       "mindplay/composer-locator": true,
+      "php-http/discovery": true,
       "phpstan/extension-installer": true,
       "wyrihaximus/broadcast": true,
       "wyrihaximus/generative-composer-plugin-tooling": true,
