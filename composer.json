@@ -9,7 +9,7 @@
     "psr/event-dispatcher": "^1.0.0"
   },
   "require-dev": {
-    "wyrihaximus/async-test-utilities": "^14.7.0",
+    "wyrihaximus/async-test-utilities": "^14.8.0",
     "wyrihaximus/makefiles": "^0.15.5",
     "wyrihaximus/test-utilities": "^14.8.0"
   },

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "396cb2a49adc71ffbd3439fab224d5d8",
+    "content-hash": "844bab0f2869f00ae671c5cef338bd20",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -11473,34 +11473,34 @@
         },
         {
             "name": "wyrihaximus/async-test-utilities",
-            "version": "14.7.0",
+            "version": "14.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-async-test-utilities.git",
-                "reference": "fd6780832427856b72353ddcb1d04f97dff3c0f6"
+                "reference": "a27b463a226682a49a20d23a6489617429a7994a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-async-test-utilities/zipball/fd6780832427856b72353ddcb1d04f97dff3c0f6",
-                "reference": "fd6780832427856b72353ddcb1d04f97dff3c0f6",
+                "url": "https://api.github.com/repos/WyriHaximus/php-async-test-utilities/zipball/a27b463a226682a49a20d23a6489617429a7994a",
+                "reference": "a27b463a226682a49a20d23a6489617429a7994a",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.4",
-                "phpunit/phpunit": "^13.4.5",
+                "phpunit/phpunit": "^13.4.6",
                 "react/async": "^4.3.0",
                 "react/event-loop": "^1.6.0",
                 "react/promise": "^3.3.0",
                 "wyrihaximus/phpstan-react": "^3.0.0",
                 "wyrihaximus/react-phpunit-run-tests-in-fiber": "^4.0.0",
-                "wyrihaximus/test-utilities": "^14.7.0"
+                "wyrihaximus/test-utilities": "^14.8.0"
             },
             "conflict": {
                 "composer/compoer": "<2.6.0"
             },
             "require-dev": {
                 "react/promise-timer": "^1.11.0",
-                "wyrihaximus/makefiles": "^0.15.4"
+                "wyrihaximus/makefiles": "^0.15.5"
             },
             "type": "library",
             "extra": {
@@ -11528,7 +11528,7 @@
             "description": "Test utilities for api-clients packages",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-async-test-utilities/issues",
-                "source": "https://github.com/WyriHaximus/php-async-test-utilities/tree/14.7.0"
+                "source": "https://github.com/WyriHaximus/php-async-test-utilities/tree/14.8.0"
             },
             "funding": [
                 {
@@ -11536,8 +11536,8 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-01T18:26:16+00:00",
-            "published-time": "2026-11-01T19:07:17+00:00"
+            "time": "2026-11-09T09:09:52+00:00",
+            "published-time": "2026-11-09T09:10:33+00:00"
         },
         {
             "name": "wyrihaximus/coding-standard",
